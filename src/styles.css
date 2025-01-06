@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+ /* You can add global styles to this file, and also import other style files */
+/* In src/styles.css */
+.company-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 0px px;
+  cursor: pointer;
+  height: 0px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.company-button:hover {
+  color: blue;
+  background-color:#e1f4ff;
+} 

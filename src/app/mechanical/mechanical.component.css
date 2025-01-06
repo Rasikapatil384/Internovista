@@ -1,0 +1,30 @@
+/* Styling for custom AG Grid */
+.custom-ag-grid .ag-header-cell {
+    text-align: center;
+    font-weight: bold;
+    background-color: #eaeaea;  /* Light grey background for header */
+  }
+  
+  .custom-ag-grid .ag-cell {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .custom-ag-grid .ag-row {
+    border-bottom: 1px solid #d0d0d0; /* Adds a border between rows */
+  }
+  
+  .custom-ag-grid .ag-checkbox-input {
+    margin: auto;
+  }
+  
+  /* Pagination Styling */
+  .ag-pagination {
+    justify-content: center;  /* Centers the pagination */
+  }
+  
+  /* General table adjustments */
+  .custom-ag-grid .ag-cell {
+    padding: 10px;
+  }
+  

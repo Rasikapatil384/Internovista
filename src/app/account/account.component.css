@@ -1,0 +1,91 @@
+/* src/app/account/account.component.css */
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  /* src/app/account/account.component.css */
+.preview-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer; /* Makes the image look clickable */
+    margin-bottom: 10px;
+  }
+  
+
+
+  /* src/app/account/account.component.css */
+.account-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .profile-picture {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+  }
+  
+  .profile-picture:hover {
+    transform: scale(1.1);
+  }
+  
+  .preview-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f2f2f2;
+  }
+  
+  .welcome-text {
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .details-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .profile-info p {
+    font-size: 18px;
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  

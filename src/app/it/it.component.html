@@ -1,0 +1,29 @@
+<div class="text-container" style="margin-left: 15px;margin-top:0px; position: absolute; top: 0; left: 0; font-size: 24px; font-weight: bold;font-family: Arial, sans-serif; padding: 10px; ">
+    <h2 style="font-family: 'Times New Roman', Times, serif;font-weight: bold;">IT</h2>
+  </div>
+
+<div style="display:flex;">
+ <div style="display:flex;justify-content:left;margin-top:130px;margin-left:10px">
+  <app-itbar style="height:10px"></app-itbar>
+ </div>
+ <p style="color:white">-----------------------------------------------------------------------------</p>
+
+ <div style="justify-content:right;margin-top:5px">
+  <app-itpie style="height:10px"></app-itpie>
+
+ </div> 
+
+</div>
+
+<hr>
+<ng-container *ngIf="isBrowser">
+  <ag-grid-angular
+    style="width: 1370px; height: 431px; margin-left: 0px; margin-right:0px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="{ sortable: true, filter: true }">
+  </ag-grid-angular>
+</ng-container>
+  
+  

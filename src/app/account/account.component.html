@@ -1,0 +1,26 @@
+<!-- src/app/account/account.component.html -->
+<div class="account-container">
+  <div class="profile-section">
+    <!-- Profile Picture -->
+    <div class="profile-picture" (click)="triggerFileInput()">
+      <img [src]="previewUrl" alt="Profile Picture" class="preview-image" />
+      <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*" style="display: none" />
+    </div>
+    <h2 class="welcome-text">Welcome, {{ SignupName }}!</h2>
+  </div>
+
+  <div class="details-section">
+    <div class="profile-info">
+      <h3>Profile Information</h3>
+      <p><strong>Name:</strong> {{ SignupName }}</p>
+      <p><strong>Email:</strong> {{ Emailid }}</p>
+      <p><strong>Branch:</strong> {{ Branch }}</p>
+      <p><strong>Year:</strong> {{ yearofstudy }}</p>
+      <a style="border-radius: 5px;text-decoration: none;" href="#">Change Password?</a>
+      <br><br>
+      <a style="border-radius: 5px;border:2px solid black;padding:5px;text-decoration: none;color:black" href="/reviewtype">Post Review</a>
+      <br><br>
+      <a style="border-radius:5px;border:2px solid black;padding:5px;text-decoration: none;color:black" href="#">Update Profile</a>
+    </div>
+  </div>
+</div>

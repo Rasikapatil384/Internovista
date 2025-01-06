@@ -1,0 +1,13 @@
+<br>
+<h3 style="display:flex;justify-content:center;margin-top:-10px;font-family: 'Times New Roman', Times, serif;font-weight: bold;">COMPANY ANALYSIS</h3>
+<hr>
+<ng-container *ngIf="isBrowser">
+  <ag-grid-angular
+    type = 'fitGridWidth'
+    style="width: 100%; height: 600px; margin-top:0px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="{ sortable: true, filter: true }">
+  </ag-grid-angular>
+</ng-container>

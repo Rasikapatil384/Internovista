@@ -1,0 +1,26 @@
+
+<div style="display: flex; height: 100vh;">
+    <!-- Sidebar -->
+    <app-sidenavbar></app-sidenavbar>
+    
+    <!-- Main content, dynamically rendered through router-outlet -->
+    <div class="main-content" style="flex-grow: 1; padding: 20px;">
+        <div class="main-content" style="flex-grow: 1; position: relative; z-index: 2; padding: 20px;">
+            <router-outlet></router-outlet> <!-- This will load the routed component -->
+          </div>
+      <!-- Main dashboard content (only shown if not on '/account' route) -->
+      <div class="text-center" *ngIf="showMainContent">
+        <app-stackedbarchart></app-stackedbarchart>
+        
+        <div style="display: flex; justify-content: center;">
+          <app-line-chart></app-line-chart>
+         <p style="color: white;">----------------------------------------</p>
+          <app-piechart></app-piechart>
+        </div>
+        <hr>
+     
+        <app-smallbuttons></app-smallbuttons>
+      </div>
+    </div>
+  </div>
+  

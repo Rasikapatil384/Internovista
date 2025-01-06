@@ -1,0 +1,21 @@
+<div class="search-bar-container" style="height:100px;">
+    <div class="search-bar">
+      <i class="fas fa-search search-icon"></i>
+      <input 
+        type="text" 
+        [(ngModel)]="quickFilterText" 
+        (input)="onSearchChange($event)" 
+        placeholder="Search here" />
+    </div>
+  </div>
+  
+  <ng-container *ngIf="isBrowser">
+    <ag-grid-angular
+      style="width: 1330px; height: 565px; margin-left: 20px; margin-right:20px;margin-top:100px"
+      class="ag-theme-alpine"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      [quickFilterText]="quickFilterText"
+      [defaultColDef]="{ sortable: true, filter: true }">
+    </ag-grid-angular>
+  </ng-container>

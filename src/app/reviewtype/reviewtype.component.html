@@ -1,0 +1,29 @@
+
+
+<div style="display: flex; justify-content: center; align-items: center;">
+    <form style="width:300px;"></form>
+    <div class="card-container" style="margin-left: 20px;">
+        <mat-card appearance="outlined" style="padding: 5px;">
+            <mat-card-content>
+                <mat-button-toggle-group 
+                    name="reviewType" 
+                    aria-label="Review Type" 
+                    style="border: 1px solid black; border-radius: 10px;"
+                    class="custom-toggle-group"
+                    [(ngModel)]="reviewType"
+                    name="reviewType">
+                    <mat-button-toggle value="pre" style="border-right:1px solid black;width:180px;height:50px" 
+                        (click)="navigateTo('preinternshipreviewpage')">
+                        Pre-Internship
+                    </mat-button-toggle>
+                    <mat-button-toggle value="post" style="width:180px;height:50px;" 
+                        (click)="navigateTo('postinternshipreviewpage')">
+                        Post-Internship
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+                <br>
+                <router-outlet></router-outlet>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

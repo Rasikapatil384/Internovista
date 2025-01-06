@@ -1,0 +1,154 @@
+<form class="example-form" #form="ngForm">
+
+    
+        
+    
+    <div style="display: flex;">
+
+        
+
+
+
+        <div>
+            <div style="display: flex;">
+            <mat-form-field class="example-full-width" style="width: 250px;height:70px;margin-top:20px;">
+                <mat-label>Name</mat-label>
+                <input matInput [(ngModel)]="formData.Name" name="Name">
+            </mat-form-field>
+        &nbsp;&nbsp;
+            <mat-form-field style="width: 240px;height:70px;margin-top:20px;">
+                <mat-label>Department</mat-label>
+                <mat-select [(ngModel)]="formData.Department" name="Department">
+                    <mat-option value="Comp">Comp</mat-option>
+                    <mat-option value="IT">IT</mat-option>
+                    <mat-option value="E&TC">E&TC</mat-option>
+                    <mat-option value="Instrumentation">Instrumentation</mat-option>
+                    <mat-option value="Mechanical">Mechanical</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+            
+            <mat-form-field class="example-full-width" style="width: 500px; height: 70px">
+                <mat-label>Company Name</mat-label>
+                <textarea 
+                    matInput 
+                    name="companyName" 
+                    [(ngModel)]="formData.companyName" 
+                    placeholder="Eg.: Google" 
+                    style="font-size: 15px; color: Black;"
+                    required>
+                </textarea>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" style="width: 500px; height: 70px">
+                <mat-label>Internship Role</mat-label>
+                <textarea 
+                    matInput 
+                    name="internshipRole" 
+                    [(ngModel)]="formData.internshipRole" 
+                    placeholder="Eg.: SDE Intern" 
+                    style="font-size: 15px; color: Black;"
+                    required>
+                </textarea>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" style="width: 500px; height: 70px">
+                <mat-label>Internship Work Done</mat-label>
+                <input 
+                    matInput 
+                    name="internshipWork" 
+                    [(ngModel)]="formData.internshipWork"
+                    required>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" style="width: 500px; height: 70px">
+                <mat-label>Internship Experience</mat-label>
+                <textarea 
+                    matInput 
+                    name="internshipExperience" 
+                    [(ngModel)]="formData.internshipExperience" 
+                    placeholder=" " 
+                    style="font-size: 15px; color: Black;"
+                    required>
+                </textarea>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" style="width: 500px; height: 70px">
+                <mat-label>Location of Internship</mat-label>
+                <textarea 
+                    matInput 
+                    name="internshipLocation" 
+                    [(ngModel)]="formData.internshipLocation" 
+                    placeholder="Eg.: Kharadi, Pune" 
+                    style="font-size: 15px; color: Black;"
+                    required>
+                </textarea>
+            </mat-form-field>
+            <br>
+            <div style="display: flex; align-items: center;">
+                <mat-button-toggle-group 
+                    name="modeOfInternship" 
+                    [(ngModel)]="formData.modeOfInternship" 
+                    aria-label="Mode of Internship"
+                    required>
+                    <mat-button-toggle value="Offline">Offline</mat-button-toggle>
+                    <mat-button-toggle value="Hybrid">Hybrid</mat-button-toggle>
+                    <mat-button-toggle value="Online">Online</mat-button-toggle>
+                </mat-button-toggle-group>
+                &nbsp;&nbsp;&nbsp;
+                <mat-slide-toggle 
+                    aria-label="isPpoSecured" 
+                    name="isPpoSecured" 
+                    [(ngModel)]="formData.isPpoSecured">
+                    Secured PPO?
+                </mat-slide-toggle>
+            </div>
+        </div>
+        <div>
+            <div *ngIf="formData.isPpoSecured" style="width: 400px; height: 70px; margin-top: 24px">
+                <mat-form-field class="example-full-width" style="width: 350px; height: 70px; margin-left: 30px;">
+                    <mat-label>Role Offered as a FullTime</mat-label>
+                    <input 
+                        matInput 
+                        name="fullTimeRole" 
+                        [(ngModel)]="formData.fullTimeRole"
+                        required>
+                </mat-form-field>
+                
+                <mat-form-field 
+                    floatLabel="always" 
+                    style="display: flex; width: 350px; height: 70px; margin-left: 30px;">
+                    <mat-label>CTC Offered (in Lakhs)</mat-label>
+                    <input 
+                        matInput 
+                        type="number" 
+                        name="ctcOffered" 
+                        [(ngModel)]="formData.ctcOffered" 
+                        placeholder="0"
+                        required>
+                    <span matTextPrefix>₹&nbsp;</span>
+                    <span matTextSuffix>.00</span>
+                </mat-form-field>
+                
+                <mat-form-field class="example-full-width" style="width: 350px; height: 70px; margin-left: 30px;">
+                    <mat-label>Job Location</mat-label>
+                    <input 
+                        matInput 
+                        name="jobLocation" 
+                        [(ngModel)]="formData.jobLocation"
+                        required>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div style="display: flex;">
+        <button 
+            mat-raised-button 
+            style="margin-top: 0px; padding: 5px; width: 150px; color: white; border-radius: 30px; height: 50px;background-color:green;" 
+            (click)="submitPostInternshipReview()"
+           > <!-- Disabled if the form is invalid -->
+            Post
+        </button>
+    </div>
+</form>

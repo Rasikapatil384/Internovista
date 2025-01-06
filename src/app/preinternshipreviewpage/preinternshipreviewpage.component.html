@@ -1,0 +1,69 @@
+<form class="example-form">
+    <div style="display: flex;">
+        <mat-form-field class="example-full-width" style="width: 250px;height:70px;margin-top:20px;">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="formData.Name" name="Name">
+        </mat-form-field>
+    &nbsp;&nbsp;
+        <mat-form-field style="width: 240px;height:70px;margin-top:20px;">
+            <mat-label>Department</mat-label>
+            <mat-select [(ngModel)]="formData.Department" name="Department">
+                <mat-option value="Comp">Comp</mat-option>
+                <mat-option value="IT">IT</mat-option>
+                <mat-option value="E&TC">E&TC</mat-option>
+                <mat-option value="Instrumentation">Instrumentation</mat-option>
+                <mat-option value="Mechanical">Mechanical</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    
+    <mat-form-field class="example-full-width" style="width: 500px;height:70px">
+        <mat-label>Company Name</mat-label>
+        <textarea matInput name="companyName" [(ngModel)]="formData.companyName" placeholder="Eg.: Google" style="font-size: 15px;color:Black;"></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" style="width: 500px;height:70px">
+        <mat-label>Test Details</mat-label>
+        <textarea matInput name="testDetails" [(ngModel)]="formData.testDetails" placeholder="Test details" style="font-size: 15px;color:Black;"></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" style="width: 500px;height:70px;">
+        <mat-label>No of Interview Rounds</mat-label>
+        <input matInput name="interviewRounds" type="number" [(ngModel)]="formData.interviewRounds">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" style="width: 500px;height:70px">
+        <mat-label>Interview Experience</mat-label>
+        <textarea matInput name="interviewExperience" [(ngModel)]="formData.interviewExperience" placeholder="Interview experience" style="font-size: 15px;color:Black;"></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" style="width: 500px;height:70px">
+        <mat-label>Type of Questions Asked</mat-label>
+        <textarea matInput name="questionTypes" [(ngModel)]="formData.questionTypes" style="font-size: 15px;color:Black;"></textarea>
+    </mat-form-field>
+    <br>
+    <div style="display: flex;">
+        <mat-form-field style="width: 250px;height:70px;">
+            <mat-label>Interview Difficulty</mat-label>
+            <mat-select name="interviewDifficulty" [(ngModel)]="formData.interviewDifficulty">
+                <mat-option value="Easy">Easy</mat-option>
+                <mat-option value="Medium">Medium</mat-option>
+                <mat-option value="Difficult">Difficult</mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width" style="width: 250px;height:70px;margin-left:8px;font-size: 10px;color:Black;">
+            <mat-label>Internship Duration</mat-label>
+            <input matInput name="internshipDuration" type="number" [(ngModel)]="formData.internshipDuration" placeholder="(in months) Eg: 2, 6">
+        </mat-form-field>
+    </div>
+    <!-- Post Button -->
+    <div style="display:flex">
+        <button 
+            mat-raised-button 
+            class="submitbutton"
+            style="margin-top: 0px;width:150px; color:white; border-radius:30px;height:50px;" 
+            (click)="submitPreInternshipReview()" 
+            type="button">Post</button>
+    </div>
+</form>
